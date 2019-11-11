@@ -11,10 +11,10 @@ node {
   stage('build') {
     sh 'make'
   }
-  stage('checkout') {
+  stage('co') {
     checkout scm
   }
-  stage('archivage') {
+  stage('archi') {
     archiveArtifacts artifacts: 'main', onlyIfSuccessful: true
   }
 }
